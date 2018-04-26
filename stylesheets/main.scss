@@ -1,7 +1,79 @@
+@import "modules/-modules";
+@import "modules/-reset";
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 
 body {
   font: 100% $font-stack;
   color: $primary-color;
+}
+
+/* Nesting */
+
+table {
+  margin: 2px 0;
+  td {
+    text-align: center
+  }
+
+  li {
+    font: {
+      family: Serif;
+      weight: bold;
+      size: 1px;
+    }
+  }
+}
+
+/* Variables */
+
+$blue: #33a0f2;
+$margin: 16px;
+
+.content {
+  border-color: $blue;
+}
+
+.border {
+  padding: $margin / 2;
+  margin: $margin / 2;
+  border-color: $blue;
+  padding: $padding;
+}
+
+/* Mixins */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+
+/* Extend/Inheritance */
+
+%equal-heights {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%message-shared {
+  border: 1px solid $blue;
+  padding: 10px;
+  color: #333;
+}
+
+.message {
+  @extend %message-shared;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: #a3adb3;
+}
+
+.warning {
+  @extend %message-shared
 }
