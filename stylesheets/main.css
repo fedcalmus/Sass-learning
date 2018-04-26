@@ -114,4 +114,29 @@ table {
 .success {
   border-color: #a3adb3; }
 
+.warning {
+  padding: 5px; }
+
+.container {
+  width: 100%; }
+
+article[role="main"] {
+  float: left;
+  width: 62.5%; }
+
+aside[role="complementary"] {
+  float: right;
+  width: 31.25%; }
+
+p {
+  color: rgba(255, 0, 0, 0.8);
+  background-color: rgba(255, 0, 0, 0.25); }
+
+div {
+  margin-left: auto;
+  margin-right: auto; }
+
+div {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
+
 /*# sourceMappingURL=main.css.map */
